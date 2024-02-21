@@ -294,7 +294,7 @@ def launch():
     background_thread.start()
 
     app.launchtime = current_time_stamp()
-    app.run(host="0.0.0.0", port=env.gateway_port, debug=False)
+    app.run()
 
 
 def main():
