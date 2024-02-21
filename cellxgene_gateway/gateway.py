@@ -22,6 +22,7 @@ from flask import (
     send_from_directory,
     url_for,
 )
+from flask_ngrok import run_with_ngrok
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 from cellxgene_gateway import env, flask_util
@@ -36,6 +37,7 @@ from cellxgene_gateway.prune_process_cache import PruneProcessCache
 from cellxgene_gateway.util import current_time_stamp
 
 app = Flask(__name__)
+run_with_ngrok(app)
 
 item_sources = []
 default_item_source = None
